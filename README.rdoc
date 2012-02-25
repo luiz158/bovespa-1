@@ -1,12 +1,12 @@
 == BOVESPA
 É uma biblioteca ruby para lidar com a bolsa de valores Bovespa. Ela está dividade em duas classes: 
-* Cotacao - Para obter a cotação de papéis pelo serviço gratuito da bolsa de valores (com deley de 15 min)
+* Cotacao - Para obter a cotação de papéis pelo serviço gratuito da bolsa de valores (com delay de 15 min)
 * Historico - Para ler os arquivos de posição da Série Histórica da Bovespa.
 
 Ainda não testado no Ruby 1.9
 
 === Bovespa::Cotacao
-Para usar, faça uma classe que herde de Bovespa::Cotacao. Ao instanciar, um objeto, ele automaticamente ganhará os atributos correspondentes ao papel. Veja o exemplo de uso.
+Para usar, faça uma classe que herde de Bovespa::Cotacao. Ao instanciar um objeto, ele automaticamente ganhará os atributos correspondentes ao papel. Veja o exemplo de uso.
 
 	class MinhaClasse < Bovespa::Cotacao
 	end
@@ -35,7 +35,7 @@ http://marcofnogueira.wordpress.com/2010/12/01/cotacoes-das-acoes-na-bolsa-de-va
 
 ===Bovespa::Historico
 
-Para ler os arquivos de posição da Série Histórica, faça sua classe herdar de Bovespa::Historico, e acesse os valores de cada papel, como no exemplo. Cada arquivo representa um dia com informações obre todos os papéis.
+Para ler os arquivos de posição da Série Histórica, faça sua classe herdar de Bovespa::Historico, e acesse os valores de cada papel, como no exemplo. Cada arquivo representa um dia com informações sobre todos os papéis.
 
 	class OutraClasse < Bovespa::Historico
 	end
@@ -46,7 +46,7 @@ Para ler os arquivos de posição da Série Histórica, faça sua classe herdar 
 	dia.petr4["codneg"]
 	dia.petr4["preabre"]
 
-Para um lista com com todos , consulte o código:
+Para um lista com todos as opções de informação disponivel, consulte o código:
 https://github.com/marcofognog/bovespa/blob/master/lib/bovespa/historico.rb
 
 E não deixe de ler o leiaute dos arquivos:
